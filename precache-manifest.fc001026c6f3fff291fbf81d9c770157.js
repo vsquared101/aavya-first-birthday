@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1281af67750b9dc1eff9bf6ac16b1cf3",
+    "revision": "30dae469a7efbef1a866fcf8318a4c97",
     "url": "/aavya-first-birthday/index.html"
   },
   {
-    "revision": "05d78b75894cd3122753",
+    "revision": "319ece2c8f8f4589888e",
     "url": "/aavya-first-birthday/static/css/main.1775048c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aavya-first-birthday/static/js/2.bafbbeba.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "05d78b75894cd3122753",
-    "url": "/aavya-first-birthday/static/js/main.5d21cecb.chunk.js"
+    "revision": "319ece2c8f8f4589888e",
+    "url": "/aavya-first-birthday/static/js/main.b4671ad4.chunk.js"
   },
   {
     "revision": "c24b4d0bc4090b28deec",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aavya-first-birthday/static/media/anujdada.b48a2dbb.jpg"
   },
   {
-    "revision": "e5586629032dce46ab87b53d6a1f5845",
-    "url": "/aavya-first-birthday/static/media/bhabhi.e5586629.jpg"
+    "revision": "c6262f2ac0441ec47a5d6d38cb06cc06",
+    "url": "/aavya-first-birthday/static/media/bhabhi.c6262f2a.jpg"
   },
   {
     "revision": "f3468cc0f58b2b373dce44b48e175a7a",
