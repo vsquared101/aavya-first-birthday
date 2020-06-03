@@ -20,10 +20,14 @@ h4{
   font-family: 'Happy Monkey', cursive;
   font-style: italic;
   font-weight: bold;
+  /*animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;*/
 }
 
-span.cupcake{
+span.heart-emoji{
   font-style: normal;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
 }
 
 @media only screen and (max-width: 350px) {
@@ -32,14 +36,31 @@ span.cupcake{
     height: 70px;
   }
 
-  span.cupcake{
+  span.heart-emoji{
     display: none;
   }
 }
 
 @media only screen and (min-width: 351px) {
-  span.cupcake{
+  span.heart-emoji{
     display: inline-block;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
 
