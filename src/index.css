@@ -5,9 +5,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:linear-gradient(rgba(250,0,0,0.7),transparent);
+  background-color:pink /*this your primary color*/
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h4{
+  color: brown;
+  margin-top: 20px;
+  font-family: 'Happy Monkey', cursive;
+  font-style: italic;
+  font-weight: bold;
+}
+
+span.cupcake{
+  font-style: normal;
+}
+
+@media only screen and (max-width: 350px) {
+  .Card img{
+    width: 70px;
+    height: 70px;
+  }
+
+  span.cupcake{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 351px) {
+  span.cupcake{
+    display: inline-block;
+  }
+}
+

@@ -1,19 +1,17 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Board from './components/Board/Board'
-import backImg from './assets/images/back.png'
-import angular from './assets/images/angular.png'
-import css from './assets/images/css.png'
-import go from './assets/images/go.png'
-import html from './assets/images/html.png'
-import rail from './assets/images/rail.png'
-import react from './assets/images/react.png'
-import scala from './assets/images/scala.png'
-import vue from './assets/images/vue.png'
+import backImg from './assets/images/pp_bg.png'
+import aavya from './assets/images/aavya.jpg'
+import coolaavya from './assets/images/coolaavya.jpg'
+import anujdada from './assets/images/anujdada.jpg'
+import neetikadidi from './assets/images/neetikadidi.jpg'
+import taujitaiji from './assets/images/taujitaiji.jpg'
+import bhabhi from './assets/images/bhabhi.jpg'
 
 function App() {
   const cards = buildCards()
   return (
-    <div className="App">
+    <div className="App" style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
       <Board cards={cards} />
     </div>
   )
@@ -23,7 +21,7 @@ export default App
 
 function buildCards() {
   let id = 0
-  const images = {angular, css, go, html, rail, react, scala, vue}
+  const images = {aavya, coolaavya, anujdada, neetikadidi, taujitaiji, bhabhi}
   const cards = Object.keys(images).reduce((result, item) => {
     const getCard = () => ({
       id: id++,
