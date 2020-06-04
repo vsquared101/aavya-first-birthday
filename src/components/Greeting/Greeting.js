@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Greeting.css';
+import tweety from '../../assets/images/giphy.gif';
 
 const Greeting = () => {
+    const [visible, setVisible] = useState(true);
+
+    const toggleSide = () => {
+        if(visible){
+            setVisible(false);
+        } else {
+            setVisible(true);
+        }
+    }
+
     return (
-        <div className="card-container">
-            <div className="front side">
-                <div className="content">
-                <h3>Happy 1st Birthday Dear Aavya</h3>
-                <p>Wish you a very very Happy Birthday.</p>
+        <div className="container" onClick={toggleSide}>
+            <div className="row justify-content-center">
+                <div className="col-xs-4 offset-xs-4" >
+                {
+                    <img src={tweety} alt="tweety" style={{ height: '200px', width: 'auto' }}/>
+                } 
                 </div>
             </div>
-            <div className="back side">
-                <div className="content">
-                <h3>Enjoy your day!</h3>
+            <div className="row justify-content-center">
+                <div className="col-xs-4 offset-xs-4" >
+                    <p>Dear Aavya, </p>
+                    <p>Wish you a very Happy</p>
+                    <p>First Birthday
+                        <span className="cursor">|</span>
+                   </p> 
                 </div>
+            </div>
+            <br/>
+            <div className="row justify-content-center">
+                
+            <span className="party-emoji" role="img" aria-label="party emoji">🎂🥳🥳🍩🎁🎁🍫🍬🍦🎈🍰🎉</span>
             </div>
         </div>
     )
