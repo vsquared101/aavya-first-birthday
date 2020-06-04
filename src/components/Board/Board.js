@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import Card from '../Card/Card'
-import './Board.css'
+import React, {useState, useEffect} from 'react';
+import Card from '../Card/Card';
+import Greeting from '../Greeting/Greeting';
+import './Board.css';
 
 const Board = (props) => {
   const [cards, setCards] = useState(props.cards);
@@ -12,35 +13,34 @@ const Board = (props) => {
     if (checkersFull(checkers) || cardAlreadyInCheckers(checkers, card)) return;
 
     const newCheckers = [...checkers, card];
-    console.log(newCheckers);
     setCheckers(newCheckers);
 
     const cardsInCheckersMatched = validateCheckers(newCheckers);
 
     if (cardsInCheckersMatched) {
-      console.log('called setCompleted...');
-      setCompleted([...completed, newCheckers[0].type]);
+      if(completed.length === 5){
+        setTimeout(() => {
+          setCompleted([...completed, newCheckers[0].type]);
+        }, 1000)
+      } else{
+        setCompleted([...completed, newCheckers[0].type]);
+      }
     }
 
     if (checkersFull(newCheckers)) {
-      console.log('checkers reset...');
       resetCheckersAfter(1000);
     }
 
     function validateCheckers(checkers){
-      console.log('validating checkers...', checkers.length === 2 &&
-      checkers[0].type === checkers[1].type);
       return checkers.length === 2 &&
       checkers[0].type === checkers[1].type
     }
 
     function cardAlreadyInCheckers(checkers, card){
-      console.log('card already in checkers...', checkers.length === 1 && checkers[0].id === card.id);
       return checkers.length === 1 && checkers[0].id === card.id
     }
 
     function checkersFull(checkers){
-      console.log('checkers full...', checkers.length === 2, checkers.length);
       return checkers.length === 2
     }
 
@@ -63,9 +63,11 @@ const Board = (props) => {
 
   return (
     <div className="Board">
-      {cards.map(card => (
+      {completed.length !== 6 && cards.map(card => (
         <Card {...card} onClick={onCardClick(card)} key={card.id} />
       ))}
+
+      {completed.length === 6 && <Greeting/>}
     </div>
   )
 }

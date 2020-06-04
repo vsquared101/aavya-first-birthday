@@ -1,12 +1,12 @@
-import React from 'react'
-import Board from './components/Board/Board'
-import backImg from './assets/images/pp_bg.png'
-import aavya from './assets/images/aavya.jpg'
-import coolaavya from './assets/images/coolaavya.jpg'
-import anujdada from './assets/images/anujdada.jpg'
-import neetikadidi from './assets/images/neetikadidi.jpg'
-import taujitaiji from './assets/images/taujitaiji.jpg'
-import bhabhi from './assets/images/bhabhi.jpg'
+import React from 'react';
+import Board from './components/Board/Board';
+import backImg from './assets/images/pp_bg.png';
+import aavya from './assets/images/aavya.jpg';
+import coolaavya from './assets/images/coolaavya.jpg';
+import anujdada from './assets/images/anujdada.jpg';
+import neetikadidi from './assets/images/neetikadidi.jpg';
+import taujitaiji from './assets/images/taujitaiji.jpg';
+import bhabhi from './assets/images/bhabhi.jpg';
 
 function App() {
   const cards = buildCards()
@@ -32,10 +32,10 @@ function buildCards() {
     })
     return [...result, getCard(), getCard()]
   }, [])
-  return suffle(cards)
+  return shuffle(cards)
 }
 
-function suffle(arr) {
+function shuffle(arr) {
   let len = arr.length
   for (let i = 0; i < len; i++) {
     let randomIdx = Math.floor(Math.random() * len)
