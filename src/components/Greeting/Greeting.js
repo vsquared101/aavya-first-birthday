@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Greeting.css';
 import tweety from '../../assets/images/giphy.gif';
+import hbd from '../../assets/audio/hbd.mp3';
+import Sound from 'react-sound';
 
 const Greeting = () => {
     const [visible, setVisible] = useState(true);
@@ -36,6 +38,11 @@ const Greeting = () => {
                 
             <span className="party-emoji" role="img" aria-label="party emoji">🎂🥳🥳🍩🎁🎁🍫🍬🍦🎈🍰🎉</span>
             </div>
+            <Sound
+                url={hbd}
+                playStatus={Sound.status.PLAYING}
+   
+            />
         </div>
     )
 };
